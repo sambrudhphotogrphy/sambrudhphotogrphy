@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattaduru Homestay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(150, 170, 190, 0.9);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        /* Mobile Navigation Active State */
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(8, 65, 0, 0.9);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        /* Mobile Navigation Active State */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav-links.active a {
+    margin: 10px 0;
+}
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("image/pexels-pixabay-258154.jpg") center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 3.5rem;
+            color: #000000;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Rooms Section */
+        /* Rooms Section */
+.room-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.room-item {
+    background: #c3df46;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.room-item h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.room-item p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.room-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.room-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Book Now Button */
+.book-now {
+    display: inline-block;
+    background-color: #6d9f00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.book-now:hover {
+    background-color: #407408;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .room-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .book-now {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
+@keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* Image Gallery */
+        .gallery {
+        background-color: #f8f8f8;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background-color: #6d9f00;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Content Blocks */
+        .content-block {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .content-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .content-image {
+            flex: 1;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #960000;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1a2635;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .content-block {
+                flex-direction: column;
+            }
+
+            .content-image {
+                width: 100%;
+                height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+        /* Slider Section */
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide all slides initially */
+.slide {
+    display: none;
+}
+
+/* Style for slideshow images */
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Dots Navigation */
+.dots-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+        /* Video Section */
+.video-section {
+    text-align: center;
+    background: #2ba335;
+    padding: 80px 20px;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgb(41, 204, 106);
+}
+
+.video-container video {
+    width: 90%;
+    border-radius: 8px;
+}
+
+
+
+.menu-title {
+    font-size: 32px;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item {
+    width: 80%;
+    max-width: 400px;
+    background: #fff;
+    border: 2px solid #2c5e4e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon img {
+    width: 60px;
+    height: 60px;
+    background-color: #dce5d4;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+h2 {
+    color: #2c5e4e;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+        /* Additional Styles */
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .container img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background: rgb(255, 253, 253);
+        padding: 20px;
+    }
+
+    .social-icon {
+        color: rgb(125, 141, 22);
+        font-size: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .social-icon:hover {
+        color: gold;
+    }
+      
+       
+
+.top-bar {
+    background: rgb(3, 1, 1);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.newsletter, .contact {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact a {
+    color: gold;
+    text-decoration: none;
+}
+.social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background: black;
+        padding: 20px;
+    }
+
+    .social-icon {
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .social-icon:hover {
+        color: gold;
+    }
+    .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  text-align: center;
+  color: gray;
+  text-decoration: none;
+  font-size: 14px;
+  flex: 1;
+}
+
+.nav-item .icon {
+  display: block;
+  font-size: 20px;
+}
+
+.nav-item.active {
+  color: goldenrod;
+}
+
+
+    </style>
+    </body>
+</head>
+<body>
+    <header>
+    <h1>Pattaduru homestay </h1>
+       
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Pattaduru Homestay</h1>
+            <p>Experience Nature's Serenity in Chikkamagaluru</p>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>Welcome to Our Sanctuary</h2>
+        <div class="content-block">
+            <div class="content-text">
+                <h3>Your Peaceful Retreat</h3>
+                <p>  Pattduru Homestay – A Serene Retreat in the Heart of Chikkamagaluru**  
+                    
+                    Nestled amidst the lush greenery of the Western Ghats, **Pattduru Homestay** near Mudigere, Chikkamagaluru, offers a perfect getaway for nature lovers and adventure seekers alike. Surrounded by misty hills, sprawling coffee plantations, and vibrant wildlife, this homestay provides a tranquil escape from the hustle and bustle of city life.  
+                    
+                    Experience the warmth of traditional Malnad hospitality with cozy, well-maintained rooms, delicious home-cooked meals, and breathtaking views from every corner of the property. Whether you're looking to unwind in nature, explore scenic trekking trails, or sip freshly brewed coffee by the bonfire, Pattduru Homestay ensures a truly rejuvenating experience.  
+                    
+                <b>**Why Choose Pattduru Homestay?**</b> 
+                <ul> 
+                   <li>✔️ Comfortable Stay:** Well-furnished rooms with modern amenities for a cozy and relaxing experience.</li>  
+                   <li>✔️ Authentic Malnad Cuisine Savor traditional homemade delicacies prepared with fresh local ingredients.</li>  
+                    <li>✔️ Adventure & Activities:** Enjoy nature walks, trekking, plantation tours, and wildlife spotting.</li>  
+                        <li>✔️ Bonfire & Stargazing:** Unwind by the bonfire under a starlit sky, making unforgettable memories.</li> 
+                    </ul>
+                    Whether you're traveling with family, friends, or on a solo retreat, **Pattduru Homestay** promises an unforgettable stay filled with nature, comfort, and adventure. Book your stay today and immerse yourself in the beauty of Chikkamagaluru!  
+                    
+                 
+                    ---  
+                    
+                    Let me know if you'd like any modifications or additional details! 😊</p>
+                
+            </div>
+            <div class="content-image">
+                <img src="image/IMG-20240620-WA0016.jpg" alt="Homestay Exterior">
+            </div>
+        </div>
+    </section>
+    <!-- Rooms Section --><section class="section" id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="room-gallery">
+        <div class="room-item">
+            <img src="image/pexels-asadphoto-2549018.jpg" alt="Deluxe Room">
+            <h3>Deluxe Room</h3>
+            <p>Experience luxury with a cozy ambiance and modern amenities.</p>
+            <a href="https://wa.me/1234567890?text=I%20want%20to%20book%20the%20Deluxe%20Room" target="_blank">
+                <button>Book Now</button>
+            </a>
+        </div>
+        <div class="room-item">
+            <img src="image/pexels-thorsten-technoman-109353-338504.jpg" alt="Family Suite">
+            <h3>Family Suite</h3>
+            <p>Spacious suite designed for families with a scenic view.</p>
+            <a href="https://wa.me/1234567890?text=I%20want%20to%20book%20the%20Family%20Suite" target="_blank">
+                <button>Book Now</button>
+            </a>
+        </div>
+        <div class="room-item">
+            <img src="image/pexels-pixabay-258154.jpg" alt="Cottage Room">
+            <h3>Cottage Room</h3>
+            <p>A perfect blend of rustic charm and comfort amidst nature.</p>
+            <a href="https://wa.me/1234567890?text=I%20want%20to%20book%20the%20Cottage%20Room" target="_blank">
+                <button>Book Now</button>
+            </a>
+        </div>
+        <div class="room-item">
+            <img src="image/pexels-manuel-barros-1263073-2403017.jpg" alt="Luxury Tent">
+            <h3>Luxury Tent</h3>
+            <p>Enjoy an outdoor experience with all the comforts of home.</p>
+            <a href="https://wa.me/1234567890?text=I%20want%20to%20book%20the%20Luxury%20Tent" target="_blank">
+                <button>Book Now</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Rest of your content -->
+    <section class="section" id="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery">
+            <!-- Add your gallery images here -->
+            <div class="gallery-item">
+                <img src="image/pexels-asadphoto-1021066.jpg" alt="Gallery 1">
+            </div>
+            <div class="gallery-item">
+                <img src="image/pexels-asadphoto-1268864.jpg" alt="Gallery 2">
+            </div>
+            <div class="gallery-item">
+                <img src="image/pexels-chdtnbn-1710795.jpg" alt="Gallery 3">
+            </div>
+            <div class="gallery-item">
+                <img src="image/pexels-gapeppy1-2373201.jpg" alt="Gallery 4">
+            </div>
+            <div class="gallery-item">
+                <img src="image/pexels-joerg-hartmann-626385254-30914383.jpg" alt="Gallery 5">
+            </div>
+            <div class="gallery-item">
+                <img src="image/pexels-habi-dompil-1539296-2964163.jpg" alt="Gallery 5">
+            </div>
+            
+            </div>
+            <section class="section" id="gallery">
+                <h2>Our Gallery</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="image/pexels-quark-studio-1159039-2507007.jpg" alt="Gallery 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="image/pexels-maria-salazar-303506-879010.jpg" alt="Gallery 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="image/pexels-quang-nguyen-vinh-222549-3355788.jpg" alt="Gallery 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="image/pexels-pixabay-258154.jpg" alt="Gallery 4">
+                    </div>
+            
+                    <!-- Previous and Next Buttons -->
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+            
+                <!-- Dots for Navigation -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </section>
+            
+            
+           
+            <!-- Video Section -->
+<section class="section video-section" id="video">
+    <h2>Experience Pattaduru Homestay</h2>
+    <div class="video-container">
+        <video controls>
+            <source src="image/854152-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+    <div class="menu-container">
+
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="image/sandwich.png" alt="Breakfast">
+            </div>
+            <h2>Breakfast</h2>
+            <p>Traditional South Indian and Malenadu dishes, fresh fruit, organic teas, and coffee</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="image/room-service.png" alt="Lunch">
+            </div>
+            <h2>Lunch</h2>
+            <p>A selection of vegetarian and non-vegetarian dishes, highlighting local flavors</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-icon">
+                <img src="image/mug-hot-alt.png" alt="Hot Tea">
+            </div>
+            <h2>Hot Tea</h2>
+            <p>Varieties of organic teas served with traditional snacks</p>
+        </div>
+
+    </div>
+
+
+
+
+
+<header class="top-bar">
+    <p>08042781231</p>
+</header>
+
+<section class="newsletter">
+    <h2>NEWSLETTER</h2>
+    <p>Subscribe to our newsletter for news, updates, exclusive discounts, and offers.</p>
+    <form>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<section class="contact">
+    <h2>CONTACT DETAILS</h2>
+    <p><strong>Address:</strong> Devaramane Road, Mularahalli village, Mudigere taluk, Chikkamagalur</p>
+    <p><strong>Phone:</strong> <a href="tel:08042781231">08042781231</a></p>
+    <p><strong>Email:</strong> <a href="mailto:akashgowda2014@gmail.com">akashgowda2014@gmail.com</a></p>
+</section>
+<div class="social-media">
+    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+</div>
+<div class="bottom-nav">
+  <a href="#about" class="nav-item active">
+    <i class="icon">🏠</i>
+    <span>Home</span>
+  </a>
+  <a href="room.html" class="nav-item">
+    <i class="icon">🛏</i>
+    <span>Rooms</span>
+</a>
+  <a href="contact.html" class="nav-item">
+    <i class="icon">📞</i>
+    <span>Contact</span>
+  </a>
+  <a href="GALLERY.HTML" class="nav-item">
+    <i class="icon">📸</i>
+   
+    <span>GALLERY</span>
+</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+        let slides = document.querySelectorAll(".slide");
+        let dots = document.querySelectorAll(".dot");
+    
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+    
+        // Remove active class from all dots
+        dots.forEach((dot) => {
+            dot.classList.remove("active");
+        });
+    
+        slideIndex++;
+    
+        // Reset index if it exceeds the number of slides
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+    
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    
+        // Change slide every 4 seconds
+        setTimeout(showSlides, 4000);
+    }
+    
+    // Manual controls for next/previous slide
+    function changeSlide(n) {
+        slideIndex += n - 1;
+        showSlides();
+    }
+    
+    // Manual controls for dots
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides();
+    }
+    document.addEventListener("scroll", function() {
+            let rooms = document.querySelectorAll(".room-item");
+            rooms.forEach(room => {
+                let position = room.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    room.style.opacity = "1";
+                    room.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+    
+    
+    
+    
+    
+ // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
